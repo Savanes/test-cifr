@@ -1,0 +1,124 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: rgba(212, 212, 212, 1);
+}
+
+.wrapper{
+    margin: 100px auto 100px auto;
+}
+
+.flex-con{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    position: relative;
+}
+
+.flex-con__elem{
+    width: 339px;
+    height: 234px;
+    box-shadow: 0px 0px 45.9px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 15px 25px 15px 25px;
+    background: rgba(255, 255, 255, 0.01);
+    /* filter: blur(5px); */
+}
+.flex-con__elem:hover{
+    background: rgba(255, 255, 255, 1);
+}
+.flex-con__elem.active{
+    box-shadow: 0px 0px 45.9px 0px rgba(255, 47, 84, 1);
+}
+
+.flex-con__elem-header{
+    font-family: Inter;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 0px;
+    text-align: left;
+}
+
+.flex-con__elem-paragraf{
+    margin-top: 40px;
+    font-family: Inter;
+    font-size: 15.5px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+
+}
+
+.wrapper-image{
+    filter: blur(5px);
+    z-index: -1;
+    position: absolute;
+    top:520px;
+    left:49.6%;
+    transform:translate(-50%, -50%);
+}
+
+.wrapper-image__img{
+    width: 950px;
+}
+
+/* ------------------------------------------------------------- */
+
+@media(max-width: 970px){
+    .wrapper-image{
+        display: none;
+    }
+}
+
+@media(max-width: 500px){
+    .flex-con{
+        gap: 40px;
+    }
+    .wrapper{
+        margin: 25px auto 25px auto;
+    }
+    .flex-con__elem{
+        width: 282px;
+        height: 195px;
+        padding: 12px 20px 12px 20px;
+    }
+    .flex-con__elem-header{
+        font-size: 31px;
+        font-weight: 400;
+        line-height: 0px;
+        text-align: left;
+    }
+    
+    .flex-con__elem-paragraf{
+        margin-top: 30px;
+        font-size: 11.8px;
+        font-weight: 400;
+        line-height: 14.52px;
+        text-align: left;
+    }
+}
+
+@media(max-width: 350px){
+    .flex-con__elem{
+        width: 266px;
+        height: 182px;
+        padding: 11px 18px 11px 18px;
+    }
+    .flex-con__elem-header{
+        margin-top: 15px;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 0px;
+        text-align: left;
+    }
+    
+    .flex-con__elem-paragraf{
+        margin-top: 20px;
+        font-size: 11.2px;
+        font-weight: 400;
+        line-height: 14.52px;
+        text-align: left;
+    }
+}
